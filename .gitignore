@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Dependências
 node_modules/
 
@@ -42,3 +43,23 @@ lessons/2/_expo-base/
 
 # ZIP temporário da atividade
 lessons/2/eda-project.zip
+=======
+# Build and Release Folders
+bin-debug/
+bin-release/
+[Oo]bj/
+[Bb]in/
+
+# Other files and folders
+.settings/
+
+# Executables
+*.swf
+*.air
+*.ipa
+*.apk
+
+# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
+# should NOT be excluded as they contain compiler settings and other important
+# information for Eclipse / Flash Builder.
+>>>>>>> da99a30ab7c87af4316c7cc80f94c8a0f6248d13
