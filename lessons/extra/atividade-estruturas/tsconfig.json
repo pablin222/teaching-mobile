@@ -2,7 +2,12 @@
   "compilerOptions": {
     "target": "ES2022",
     "module": "CommonJS",
+<<<<<<< HEAD
     "moduleResolution": "bundler",
+=======
+    "moduleResolution": "Node",
+    "ignoreDeprecations": "6.0",
+>>>>>>> upstream/main
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
