@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+ import { useState } from "react";
+import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { CartaoMemoria } from "../components/CartaoMemoria";
 import { MEMORIAS } from "../src/dominio";
@@ -15,9 +15,19 @@ export default function Index() {
   return (
     <SafeAreaView style={styles.tela}>
       <ScrollView contentContainerStyle={styles.conteudo}>
-        <Text style={styles.marca}>IFMA · PROTÓTIPO DIDÁTICO</Text>
-        <Text style={styles.titulo}>Memórias Quilombolas</Text>
-        <Text style={styles.introducao}>Selecione um registro fictício para visualizar seus detalhes.</Text>
+        <View style={styles.cabecalho}>
+          <Image
+            source={require("../assets/images/arquivo-didatico.png")}
+            style={styles.imagemCabecalho}
+            accessibilityRole="image"
+            accessibilityLabel="Ilustração decorativa de um arquivo didático"
+          />
+          <View style={styles.textosCabecalho}>
+            <Text style={styles.marca}>IFMA · PROTÓTIPO DIDÁTICO</Text>
+            <Text style={styles.titulo}>Memórias Quilombolas</Text>
+            <Text style={styles.introducao}>Selecione um registro fictício para visualizar seus detalhes.</Text>
+          </View>
+        </View>
 
         <View style={styles.lista}>
           {MEMORIAS.map((memoria) => (
@@ -49,6 +59,9 @@ export default function Index() {
 const styles = StyleSheet.create({
   tela: { flex: 1, backgroundColor: "#F8FAFC" },
   conteudo: { padding: 20, paddingBottom: 36, width: "100%", maxWidth: 720, alignSelf: "center" },
+  cabecalho: { flexDirection: "row", alignItems: "center", gap: 16 },
+  imagemCabecalho: { width: 92, height: 92, borderRadius: 12 },
+  textosCabecalho: { flex: 1 },
   marca: { color: "#B91C1C", fontSize: 12, fontWeight: "700" },
   titulo: { color: "#166534", fontSize: 30, fontWeight: "800", marginTop: 6 },
   introducao: { color: "#334155", fontSize: 16, lineHeight: 23, marginTop: 8 },
